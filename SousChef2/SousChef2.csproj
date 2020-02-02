@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE7EE039-2ACD-4B12-ABC6-DC7C35E341A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SousChef2</RootNamespace>
+    <AssemblyName>SousChef2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="foodListDataSet.cs">
+      <DependentUpon>foodListDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="foodListDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>foodListDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="foodListDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>foodListDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddFood.Designer.cs">
+      <DependentUpon>frmAddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFridge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFridge.Designer.cs">
+      <DependentUpon>frmFridge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFridgePantry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFridgePantry.Designer.cs">
+      <DependentUpon>frmFridgePantry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecipes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecipes.Designer.cs">
+      <DependentUpon>frmRecipes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeDataSet.cs">
+      <DependentUpon>RecipeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecipeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SousChef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SousChef.Designer.cs">
+      <DependentUpon>SousChef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantryFr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantryFr.Designer.cs">
+      <DependentUpon>PantryFr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddFood.resx">
+      <DependentUpon>frmAddFood.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFridge.resx">
+      <DependentUpon>frmFridge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFridgePantry.resx">
+      <DependentUpon>frmFridgePantry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecipes.resx">
+      <DependentUpon>frmRecipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SousChef.resx">
+      <DependentUpon>SousChef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantryFr.resx">
+      <DependentUpon>PantryFr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="foodListDataSet.xsc">
+      <DependentUpon>foodListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="foodListDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>foodListDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="foodListDataSet.xss">
+      <DependentUpon>foodListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="foodListDataSet1.xsc">
+      <DependentUpon>foodListDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="foodListDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>foodListDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="foodListDataSet1.xss">
+      <DependentUpon>foodListDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="foodList.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="foodList_log.ldf">
+      <DependentUpon>foodList.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\txtyour.png" />
+    <None Include="Resources\txtIngredients.png" />
+    <None Include="Resources\txtRecipes.png" />
+    <None Include="RecipeDataSet.xsc">
+      <DependentUpon>RecipeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RecipeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RecipeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RecipeDataSet.xss">
+      <DependentUpon>RecipeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\txtAddFood.png" />
+    <None Include="Resources\txtFridge.png" />
+    <None Include="Resources\txtPantryAndFridge.png" />
+    <None Include="Resources\txtPantry.png" />
+    <None Include="Resources\txtP1.png" />
+    <None Include="Resources\txtEF.png" />
+    <None Include="Resources\home_iconGoldBorder1.png" />
+    <None Include="Resources\home_iconGoldBorder.png" />
+    <None Include="Resources\txtAF.png" />
+    <None Include="Resources\txtf.png" />
+    <None Include="Resources\txtP.png" />
+    <None Include="Resources\txtPNF.png" />
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
